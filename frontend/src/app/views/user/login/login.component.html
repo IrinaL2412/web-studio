@@ -1,0 +1,39 @@
+<section class="login" [formGroup]="loginForm">
+  <div class="container">
+    <div class="auth-form">
+      <div class="auth-title">Войти в личный кабинет</div>
+      <div class="auth-inputs">
+        <div class="auth-input">
+          <input type="text" class="input" placeholder="Электронная почта" formControlName="email">
+          <div *ngIf="email?.invalid && (email?.touched || email?.dirty)">
+            <div class="invalid" *ngIf="email?.errors?.['required']">
+              Введите email
+            </div>
+            <div class="invalid" *ngIf="email?.errors?.['email']">
+              Введите корректный email
+            </div>
+          </div>
+        </div>
+        <div class="auth-input">
+          <input type="password" class="input" placeholder="Пароль" formControlName="password">
+          <div class="invalid" *ngIf="password?.invalid && (password?.touched || password?.dirty)">
+              Введите пароль
+          </div>
+        </div>
+        <div class="auth-checkbox">
+          <input type="checkbox" class="input" id="remember-me" formControlName="rememberMe">
+          <label for="remember-me">Запомнить меня</label>
+        </div>
+      </div>
+      <div class="auth-button">
+        <button class="button" [disabled]="loginForm.invalid" (click)="login()">Войти</button>
+      </div>
+      <div class="auth-link">
+        Нет аккаунта? <a routerLink="/signup">Пройдите регистрацию</a>
+      </div>
+    </div>
+    <div class="page-image">
+      <img src="/assets/images/page/login.png" alt="worker">
+    </div>
+  </div>
+</section>

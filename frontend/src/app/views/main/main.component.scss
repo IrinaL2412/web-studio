@@ -1,0 +1,408 @@
+@import "../../../assets/styles/variables";
+@import "../../../assets/styles/mixins";
+@import "../../../assets/styles/popup";
+
+.main {
+  padding-bottom: 60px;
+  position: relative;
+
+  .container {
+    .main-carousel {
+      position: relative;
+
+      .menu-carousel-item {
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 1240px;
+        height: 500px;
+        padding: 100px 80px 0;
+        box-sizing: border-box;
+
+        .main-carousel-content {
+          width: 576px;
+
+          .main-carousel-title {
+            color: $light-blue-color;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 4.8px;
+            text-transform: uppercase;
+          }
+
+          .main-carousel-text {
+            color: #FFF;
+            font-family: Lora, sans-serif;
+            font-size: 50px;
+            font-weight: 400;
+            line-height: 130%;
+
+            span {
+              color: $light-blue-color;
+            }
+          }
+
+          .main-carousel-description {
+            color: #FFF;
+            font-size: 24px;
+            line-height: 130%;
+            width: 456px;
+            margin-top: 20px;
+          }
+
+          .main-carousel-button {
+            margin-top: 40px;
+          }
+        }
+
+        &.slider-two {
+          .main-carousel-content {
+            .main-carousel-button {
+              margin-top: 50px;
+            }
+          }
+        }
+      }
+
+      .main-carousel-arrows {
+        display: flex;
+
+        a {
+          top: calc(50% - 28px);
+          display: flex;
+          position: absolute;
+          cursor: pointer;
+          z-index: 1;
+
+          &.move-backward {
+            left: 10px;
+          }
+
+          &.move-forward {
+            right: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.services {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  .container {
+    .services-title {
+      @include head-lora-38;
+      margin-bottom: 40px;
+    }
+
+    .services-items {
+      display: flex;
+      gap: 26px;
+
+      .services-item {
+        display: flex;
+        flex-direction: column;
+        width: 290px;
+        height: 498px;
+
+        .services-item-image {
+          width: 291px;
+          height: 291px;
+          border-radius: 5px;
+          background-size: cover;
+          background-position: center;
+        }
+
+        .services-item-title {
+          color: $light-blue-color;
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 130%;
+          margin-top: 15px;
+          margin-bottom: 10px;
+        }
+
+        .services-item-description {
+          color: $dark-blue-color;
+          font-size: 14px;
+          line-height: 130%;
+        }
+
+        .services-item-details {
+          margin-top: auto;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .services-item-price {
+            color: $light-blue-color;
+            font-size: 20px;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}
+
+.about-us {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  .container {
+    display: flex;
+
+    .about-us-image {
+      display: flex;
+      width: 460px;
+      height: 453px;
+      flex-shrink: 0;
+    }
+
+    .about-us-info {
+      margin-left: 68px;
+
+      .about-us-title {
+        @include head-lora-38;
+        margin-bottom: 20px;
+      }
+
+      .about-us-description {
+        width: 633px;
+        color: $dark-indigo-color;
+        font-size: 14px;
+        line-height: 130%;
+        margin-bottom: 40px;
+
+        span {
+          font-weight: 500;
+        }
+      }
+
+      .about-us-advantages {
+        .about-us-advantages-title {
+          @include head-lora-38;
+          font-size: 26px;
+          margin-bottom: 20px;
+        }
+
+        .about-us-advantages-items {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 20px 71px;
+
+          .about-us-advantages-item {
+            display: flex;
+            justify-content: space-between;
+            width: 316px;
+
+            .about-us-advantages-item-number {
+              background-color: $super-light-blue-color;
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              flex-shrink: 0;
+              position: relative;
+              transition: .4s ease;
+
+              span {
+                @include head-lora-38;
+                font-size: 50px;
+                font-weight: 500;
+                position: absolute;
+                top: -19px;
+                left: 19%;
+                transition: .4s ease;
+
+                &.first {
+                  left: 28%;
+                }
+              }
+            }
+
+            .about-us-advantages-item-description {
+              color: $dark-indigo-color;
+              font-size: 14px;
+              line-height: 130%;
+              width: 256px;
+
+              span {
+                font-weight: 500;
+              }
+            }
+
+            &:hover .about-us-advantages-item-number {
+              background-color: $light-blue-color;
+
+              span {
+                color: $dark-blue-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.popular-articles {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .popular-articles-title {
+      @include head-lora-38;
+      margin-bottom: 40px;
+    }
+
+    .popular-articles-items {
+      display: flex;
+      gap: 24px;
+    }
+
+    .popular-articles-go-to-blog {
+      align-self: flex-end;
+      display: flex;
+      align-items: center;
+      margin-top: 40px;
+
+      .popular-articles-go-to-blog-text {
+        text-decoration: none;
+        color: $light-blue-color;
+        font-size: 20px;
+        font-weight: 500;
+        margin-right: 14px;
+      }
+
+      svg {
+        padding-top: 3px;
+      }
+    }
+  }
+}
+
+.reviews {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  .container {
+    .reviews-title {
+      @include head-lora-38;
+      margin-bottom: 20px;
+    }
+
+    .reviews-carousel {
+      position: relative;
+
+      .reviews-item {
+        width: 396px;
+        height: 267px;
+        padding: 30px;
+        border-radius: 5px;
+        border: 2px solid $light-blue-color;
+        box-sizing: border-box;
+
+        .reviews-item-head {
+          display: flex;
+          align-items: center;
+
+          .reviews-item-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-position: center;
+            background-size: cover;
+            margin-right: 26px;
+          }
+
+          .reviews-item-name {
+            color: $light-blue-color;
+            font-size: 18px;
+            font-weight: 600;
+          }
+        }
+
+        .reviews-item-text {
+          margin-top: 15px;
+          color: $dark-blue-color;
+          font-size: 16px;
+          line-height: 140%;
+        }
+      }
+
+      .reviews-arrows {
+        display: flex;
+
+        a {
+          top: calc(50% - 10px);
+          display: flex;
+          position: absolute;
+          cursor: pointer;
+
+          &.move-backward {
+            left: -34px;
+          }
+
+          &.move-forward {
+            right: -34px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.contacts {
+  padding-top: 60px;
+  padding-bottom: 120px;
+
+  .container {
+    display: flex;
+
+    .contacts-info {
+      margin-left: 26px;
+      width: 501px;
+
+      .contacts-title {
+        @include head-lora-38;
+        margin-bottom: 20px;
+      }
+
+      .contacts-info-block {
+        margin-bottom: 20px;
+
+        .contacts-info-block-title {
+          @include head-Montserrat-20-bold;
+          margin-bottom: 10px;
+        }
+
+        .contacts-info-block-info {
+          color: $dark-blue-color;
+          font-size: 14px;
+          line-height: 130%;
+
+          &.email, &.phone {
+            text-decoration: none;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+
+        &.social {
+          .contacts-info-block-info {
+            a {
+              margin-right: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

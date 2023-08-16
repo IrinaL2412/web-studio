@@ -1,0 +1,183 @@
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/mixins";
+
+.detail {
+  padding-top: 80px;
+  padding-bottom: 120px;
+
+  .container {
+    .detail-header {
+      margin-bottom: 60px;
+      display: flex;
+      column-gap: 8px;
+      align-items: center;
+
+      a {
+        font-size: 16px;
+        color: $super-light-blue-color;
+        text-decoration: none;
+      }
+
+      span {
+        font-size: 14px;
+        color: $super-light-blue-color;
+      }
+
+      .detail-header-title {
+        color: $light-blue-color;
+        font-weight: 500;
+        font-size: 16px;
+      }
+
+    }
+
+    .detail-main {
+      display: grid;
+      grid-template-columns: 607px 1fr;
+      gap: 40px 106px;
+      margin-bottom: 60px;
+
+      .detail-main-title {
+        @include head-lora-38;
+        grid-row: 1 / 1;
+        grid-column: 1 / 1;
+      }
+
+      .detail-main-description {
+        @include head-Montserrat-20-bold;
+        font-weight: 400;
+        line-height: 130%;
+        grid-row: 2 / 2;
+        grid-column: 1 / 1;
+      }
+
+      .detail-main-image {
+        width: 527px;
+        height: 320px;
+        background-size: cover;
+        background-position: center;
+        grid-row: span 2;
+        grid-column: 2 / 2;
+      }
+    }
+
+    .detail-content {
+      display: flex;
+      justify-content: space-between;
+
+      .detail-content-left {
+        width: 818px;
+
+        .detail-content-left-shared {
+          margin-top: 60px;
+          margin-bottom: 60px;
+          display: flex;
+          align-items: center;
+          column-gap: 20px;
+
+          .detail-content-left-shared-text {
+            color: $light-blue-color;
+            font-size: 14px;
+            font-weight: 500;
+          }
+
+          .detail-content-left-shared-social {
+            display: flex;
+            align-items: center;
+            column-gap: 13px;
+            margin-top: 5px;
+          }
+        }
+
+        .detail-content-left-comments {
+          .detail-content-left-comments-title {
+            @include head-lora-38;
+          }
+
+          .detail-content-left-comments-text {
+            margin-top: 20px;
+            margin-bottom: 40px;
+            color: $dark-blue-color;
+            font-size: 14px;
+          }
+
+          .detail-content-left-comments-send {
+            margin-top: 40px;
+
+            textarea {
+              width: 818px;
+              height: 248px;
+              padding: 20px 64px 20px 20px;
+              box-sizing: border-box;
+              border-radius: 3px;
+              border: 2px solid $light-blue-color;
+              background: #FFF;
+              color: $dark-blue-color;
+              outline-color: #346eeb;
+              margin-bottom: 15px;
+              font-size: 14px;
+              font-family: Montserrat, sans-serif;
+              font-weight: 400;
+
+              &::placeholder {
+                color: #A8ABA7;
+              }
+            }
+          }
+
+          .detail-content-left-comments-details {
+            margin-top: 20px;
+            color: $dark-blue-color;
+            font-size: 14px;
+
+            a {
+              color: $light-blue-color;
+              text-decoration: none;
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+
+          .detail-content-left-comments-items {
+            display: flex;
+            flex-direction: column;
+            row-gap: 40px;
+            margin-top: 60px;
+          }
+
+          .detail-content-left-comments-show-more {
+            @include head-Montserrat-20-bold;
+            display: flex;
+            align-items: center;
+            margin-top: 60px;
+            cursor: pointer;
+            width: 336px;
+
+            svg {
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+
+      .detail-content-right-related-articles {
+        margin-top: 60px;
+
+        .detail-content-right-related-articles-title {
+          @include head-lora-38;
+          font-size: 26px;
+          font-weight: 400;
+          margin-bottom: 20px;
+        }
+
+        .detail-content-right-related-articles-items {
+          display: flex;
+          flex-direction: column;
+          row-gap: 60px;
+        }
+      }
+    }
+  }
+}

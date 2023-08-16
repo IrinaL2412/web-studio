@@ -1,0 +1,72 @@
+@import "../../../../assets/styles/variables";
+
+.detail-content-left-comments-item {
+  .detail-content-left-comments-item-header {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    grid-gap: 0 26px;
+    margin-bottom: 15px;
+
+    .detail-content-left-comments-item-header-image {
+      display: flex;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: $super-light-blue-color;
+      border: 2px solid $light-blue-color;
+      grid-row: span 2;
+    }
+
+    .detail-content-left-comments-item-header-name {
+      color: $light-blue-color;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .detail-content-left-comments-item-header-date {
+      color: #BEBEBE;
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+
+  .detail-content-left-comments-item-text {
+    color: $dark-blue-color;
+    font-size: 14px;
+    line-height: 140%;
+    margin-bottom: 39px;
+  }
+
+  .detail-content-left-comments-item-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    .detail-content-left-comments-item-action {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+
+      span {
+        color: $dark-blue-color;
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      svg {
+        cursor: pointer;
+        stroke: $dark-blue-color;
+      }
+
+      &.active {
+        span {
+          color: $light-blue-color;
+        }
+
+        svg {
+          stroke: $light-blue-color;
+        }
+      }
+    }
+  }
+}

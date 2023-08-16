@@ -1,0 +1,32 @@
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/mixins";
+
+.policy {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  line-height: 140%;
+
+  .container {
+    .policy-main {
+      @include head-Montserrat-20-bold;
+      color: $dark-blue-color;
+      margin-bottom: 40px;
+    }
+
+    .policy-extra {
+      font-size: 18px;
+      color: $dark-blue-color;
+      margin-bottom: 40px;
+    }
+
+    .policy-title {
+      @include head-Montserrat-20-bold;
+      margin-bottom: 20px;
+    }
+
+    .policy-description {
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+  }
+}

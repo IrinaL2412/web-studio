@@ -1,0 +1,62 @@
+<section class="signup" [formGroup]="signupForm">
+  <div class="container">
+    <div class="auth-form">
+      <div class="auth-title">Регистрация на сайте</div>
+      <div class="auth-inputs">
+        <div class="auth-input">
+          <input type="text" class="input" placeholder="Ваше имя"
+          formControlName="name">
+          <div *ngIf="name?.invalid && (name?.touched || name?.dirty)">
+            <div class="invalid" *ngIf="name?.errors?.['required']">
+              Введите имя
+            </div>
+            <div class="invalid" *ngIf="name?.errors?.['pattern']">
+              Имя может содержать русские и латинские буквы и должно начинаться с заглавной буквы
+            </div>
+          </div>
+        </div>
+        <div class="auth-input">
+          <input type="text" class="input" placeholder="Электронная почта"
+                 formControlName="email">
+          <div *ngIf="email?.invalid && (email?.touched || email?.dirty)">
+            <div class="invalid" *ngIf="email?.errors?.['required']">
+              Введите email
+            </div>
+            <div class="invalid" *ngIf="email?.errors?.['email']">
+              Введите корректный email
+            </div>
+          </div>
+        </div>
+        <div class="auth-input">
+          <input type="password" class="input" placeholder="Пароль"
+                 formControlName="password">
+          <div *ngIf="password?.invalid && (password?.touched || password?.dirty)">
+            <div class="invalid" *ngIf="password?.errors?.['required']">
+              Введите пароль
+            </div>
+            <div class="invalid" *ngIf="password?.errors?.['pattern']">
+              Пароль должен содержать не менее 8 символов, включая минимум 1 цифру и 1 латинскую букву в верхнем регистре
+            </div>
+          </div>
+        </div>
+        <div class="auth-checkbox">
+          <input type="checkbox" class="input" id="agree"
+                 formControlName="agree">
+          <label for="agree">Я принимаю <a routerLink="/policy" fragment="policy-agree1">условия пользовательского соглашения</a> и даю <a routerLink="/policy" fragment="policy-agree2">согласие на обработку персональных данных</a>.</label>
+          <div class="invalid" *ngIf="agree?.invalid && (agree?.touched || agree?.dirty)">
+            Подтвердите своё согласие
+          </div>
+        </div>
+      </div>
+      <div class="auth-button">
+        <button class="button" [disabled]="signupForm.invalid" (click)="signup()">Зарегистрироваться</button>
+      </div>
+      <div class="auth-link">
+        Уже есть аккаунт? <a routerLink="/login">Войдите</a>
+      </div>
+    </div>
+    <div class="page-image">
+      <img src="/assets/images/page/signup.png" alt="business plan">
+    </div>
+  </div>
+</section>

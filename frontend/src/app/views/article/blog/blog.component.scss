@@ -1,0 +1,167 @@
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/mixins";
+
+.blog {
+  padding-top: 80px;
+  padding-bottom: 120px;
+
+  .container {
+    .blog-title {
+      @include head-lora-38;
+      margin-bottom: 40px;
+    }
+
+    .blog-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 33px;
+
+      .blog-applied-filters {
+        display: flex;
+        flex-wrap: wrap;
+
+        .blog-applied-filter {
+          border-radius: 5px;
+          border: 1px solid $light-blue-color;
+          background: #FFF;
+          color: #709FDC;
+          font-size: 16px;
+          padding: 7px 20px;
+          box-sizing: border-box;
+          display: flex;
+          align-items: center;
+          margin-right: 20px;
+
+          a {
+            text-decoration: none;
+            cursor: pointer;
+            display: flex;
+            margin-left: 8px;
+          }
+        }
+      }
+
+      .blog-filter {
+        width: 148px;
+        min-width: 148px;
+        box-sizing: border-box;
+        position: relative;
+        cursor: pointer;
+
+        .blog-filter-head {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 12px 0 11px 23px;
+          color: $dark-blue-color;
+          font-size: 16px;
+
+          span {
+            margin-right: 8px;
+          }
+        }
+
+        .blog-filter-body {
+          display: none;
+          position: absolute;
+          width: 100%;
+          box-sizing: border-box;
+          z-index: 3;
+          padding: 12px 23px;
+          border-radius: 0 0 5px 5px;
+          border: 1px solid $super-light-blue-color;
+          background: #FFF;
+          color: #BEBEBE;
+
+          .blog-filter-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 14px;
+            padding: 5px 0;
+            cursor: pointer;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            &.active {
+              color: $dark-blue-color;
+            }
+          }
+        }
+
+        &.open {
+          width: 257px;
+          min-width: 257px;
+
+          .blog-filter-head {
+            border-radius: 5px 5px 0 0;
+            background: $super-light-blue-color;
+            padding: 12px 23px;
+          }
+
+          .blog-filter-body {
+            display: block;
+          }
+        }
+      }
+    }
+
+    .blog-articles {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px 24px;
+    }
+
+    .pagination {
+      margin-top: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .pagination-arrow {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+          transform: rotate(90deg);
+          fill: $super-light-blue-color;
+
+        }
+
+        &.disabled {
+          svg {
+            fill: lightgray;
+          }
+        }
+      }
+
+      .pagination-pages {
+        margin-left: 35px;
+        margin-right: 35px;
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+
+        .pagination-page {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-decoration: none;
+          padding: 10px;
+          cursor: pointer;
+          color: $dark-blue-color;
+          font-size: 20px;
+
+          &.active {
+            color: $super-light-blue-color;
+          }
+        }
+      }
+    }
+  }
+}

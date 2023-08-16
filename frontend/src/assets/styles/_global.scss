@@ -1,0 +1,136 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+  @include head-Montserrat-20-bold;
+}
+
+p {
+  color: $dark-blue-color;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 130%;
+}
+
+.container {
+  max-width: $container-width;
+  margin: 0 auto;
+}
+
+.input, .select {
+  padding: 16px 20px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  border: 2px solid $light-blue-color;
+  color: $light-blue-color;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  outline-color: #346eeb;
+
+  &::placeholder {
+    color: #A8ABA7;
+  }
+
+  &.ng-invalid.ng-dirty,
+  &.ng-invalid.ng-touched {
+    border-color: red;
+  }
+}
+
+.invalid {
+  display: block;
+  color: red;
+  font-family: Montserrat, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  margin: 5px 0 10px;
+}
+
+.button {
+  width: 422px;
+  padding: 15px;
+  border-radius: 5px;
+  border: 0;
+  box-sizing: border-box;
+  background: $light-blue-color;
+  color: #FFF;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 130%;
+  cursor: pointer;
+  transition: .2s ease-in-out;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: .4;
+  }
+
+  &:hover {
+    background: #5c90d4;
+  }
+
+  &.small-button {
+    width: 163px;
+  }
+}
+
+
+.cdk-overlay-pane {
+  min-width: unset;
+  max-width: unset;
+
+  .mat-mdc-menu-panel.mat-mdc-menu-panel {
+    display: grid;
+    place-items: center;
+    min-width: 83px;
+    max-width: 90px;
+    max-height: 46px;
+
+    .mat-mdc-menu-item {
+      min-height: 30px;
+      text-align: center;
+      color: $dark-blue-color;
+
+      .mdc-list-item__primary-text {
+        font-family: Montserrat, sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.owl-theme .owl-nav.disabled+.owl-dots {
+  margin-top: -36px;
+  position: absolute;
+  right: calc(50% - 43px);
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  margin: 0 10px;
+  background: transparent;
+  border: 1px solid #FFFFFF;
+}
+
+.owl-theme .owl-dots .owl-dot.active span {
+  background: #FFFFFF;
+}
+
+.response-error {
+  color: red;
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 10px;
+}
