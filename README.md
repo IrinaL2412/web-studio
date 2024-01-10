@@ -33,4 +33,8 @@ name: Test
 
 email: test@gmail.com
 
+<<<<<<< HEAD
 password: 12345678Q
+=======
+password: 12345678Q
+>>>>>>> e912ce94e91cfda2164de3389230f8f7feccead6
