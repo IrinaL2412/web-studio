@@ -27,11 +27,18 @@ The project includes:
 
 ## Usage
 
-Test data for authorization (sign up)
+### Test data for authorization (log in)
+
+email: test@gmail.com
+
+password: 12345678
+
+
+### Test data for authorization (sign up)
 
 name: Test
 
-email: test@gmail.com
+email: test2@gmail.com
 
 password: 12345678Q
 
