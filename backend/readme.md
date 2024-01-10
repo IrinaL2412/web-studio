@@ -1,4 +1,4 @@
-#Steps to run the project:
+# Steps to run the project:
 1. Run `npm i`
 2. Run `npm install -g migrate-mongo`
 3. Run `migrate-mongo up`
